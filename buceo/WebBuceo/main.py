@@ -1,5 +1,7 @@
+from WebBuceo.load.loadData import loadDataParquet
 from extract.ExtractGeo import ExtractGeo
 from transform.transform import *
+from load.loadData import *
 
 if __name__ == "__main__":
     #Extract Data API
@@ -9,4 +11,7 @@ if __name__ == "__main__":
     #Transform Data
     transformer = TransformData()
     df = transformer.transformData(resultados)
-    df.show()
+
+    #Load Data
+    load = loadDataParquet()
+    load.loadData(df)
