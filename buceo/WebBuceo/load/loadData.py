@@ -7,4 +7,4 @@ class loadDataParquet:
 
 
     def loadData(self, df):
-        df.write.mode("overwrite").parquet("buceo/WebBuceo/data/tmp/marineregions.parquet")
+        df.write.mode("overwrite").parquet("buceo/WebBuceo/data/tmp/marineregions")
