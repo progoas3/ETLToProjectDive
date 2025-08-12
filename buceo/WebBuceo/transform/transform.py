@@ -42,8 +42,13 @@ class TransformData:
     def transformData(self, data):
         data2 = self.convert_numbers_to_float(data)
         flat_data = [item for sublist in data2 for item in sublist]
-        df = self.spark.createDataFrame(
+        dfAll = self.spark.createDataFrame(
             flat_data,
             schema=self.schema
         )
+        df = self.cleanData(dfAll)
         return df
+
+    def cleanData(self, df):
+        dfTransform = df.filter(df.preferredGazetteerName.contains("Colombian") & df.gazetteerSource.isNotNull())
+        return dfTransform
