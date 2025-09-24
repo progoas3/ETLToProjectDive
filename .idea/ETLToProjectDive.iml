@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/buceo" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.11 (ETLToProjectDive)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.11 (webBuceoAlpha)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
